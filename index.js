@@ -68,6 +68,66 @@ console.log(aboutMe.favFood[0].healthy);
 // ----------- object- ---------------//
 
 
+// #2 practice ------//
+console.log(console);
+// console is object, log is function
+function sayHello(name, age) {
+  console.log('Hello! ' +  name + " you are " + age + " years old" );
+}
+   
+sayHello("Brad", 15);
+
+function sayHi(name, age) {
+  return `Hello! ${name} you are ${age} years old`;
+}
+
+const greetDaeho = sayHi("Brad", 29)
+
+console.log(greetDaeho)
+// ----------
+const calculator = {
+ plus: function(a, b){
+  return a+b; //you can use a**b, a/b, a*b, a%b, a+b
+ } 
+}
+const plus = calculator.plus(5, 2)
+console.log(plus)
+// ---------------------------------------------------------------
+
+console.log(document);
+// document는 html을 뜻한다.
+
+const title = document.getElementById("title");
+
+console.log(title);
+
+console.error("error")
+
+title.innerHTML = "Hi From JS"
+// title is DOM
+
+console.dir(title);
+// dir is function that shows all the information about DOM which helps to modify html
+
+const title_title1 = document.querySelector(".title_title1");
+
+console.log(title_title1);
+
+title_title1.outerHTML = "JS is the best program language"
+
+console.dir(title_title1);
+
+// ----------------------- event------------------//
+
+
+function handleClick(){
+  title.style.color = "red";
+}
+
+
+title.addEventListener("click", handleClick)
+
+
 
 
 
