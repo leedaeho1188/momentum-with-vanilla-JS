@@ -15,10 +15,10 @@ let name = 'brad lee'
 
 // 'var'은 변수 재선언이 되지만 'let' or 'const'는 변수 재선언이 되지 않는다.
 
-// const what = "brad lee"
+const what = "brad lee"
 // what = "brad lee"
 
-// console.log(what);
+console.log(what);
 
 const wat = true;
 // true = 0, false = 1  boolean
@@ -50,6 +50,7 @@ const aboutMe = {
     },
     {
       name: "kimchi ggigae",
+      
       healthy: true
     }
   ]
@@ -65,6 +66,14 @@ console.log(aboutMe.favMovies[1]);
 
 console.log(aboutMe.favFood[0].healthy);
 
+var person = {
+  firstName: "John",
+  lastName : "Doe",
+  id       : 5566,
+  fullName : function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
 // ----------- object- ---------------//
 
 
@@ -113,7 +122,6 @@ const title_title1 = document.querySelector(".title_title1");
 
 console.log(title_title1);
 
-title_title1.outerHTML = "JS is the best program language"
 
 console.dir(title_title1);
 
@@ -121,13 +129,87 @@ console.dir(title_title1);
 
 
 function handleClick(){
-  title.style.color = "red";
+  if(title.style.color == "red"){
+    title.style.color = "white";
+    console.log(title.style.color);
+  }
+  else{
+    title.style.color = "red";
+    console.log(title.style.color);
+  }
+}
+
+title.addEventListener("click", handleClick)
+// flat color 에서 색을 가져올 수 있다. 
+
+
+
+// const BASE_COLOR = "white";
+// const OTHER_COLOR = "blue";
+
+const MOUSEOVER = "mouseOver";
+
+function mouseOver(){
+  title_title1.classList.toggle(MOUSEOVER);
+  // const currentClass = title_title1.className;
+  // if(title_title1.className.indexOf(MOUSEOVER) == -1){
+  //   title_title1.className = title_title1.className + MOUSEOVER;
+  // }
+  // else{
+  //   title_title1.className = title_title1.className.replace(MOUSEOVER, " ");
+  // }
+}
+
+// if you use 'toggle' you can make code simpler
+
+
+
+
+//   const currentColor = title_title1.style.color;
+//   if(currentColor == BASE_COLOR) {
+//     title_title1.style.color = OTHER_COLOR;
+//   }
+//   else {
+//     title_title1.style.color = BASE_COLOR;
+//   }
+// }
+
+function init(){
+  // title_title1.style.color = BASE_COLOR;
+  title_title1.addEventListener("mouseenter", mouseOver);
+}
+
+init();
+
+//  javascript event를 검색할 때는 MDN을 사용하시요.
+
+
+// if,else에서는 and를 &&로 or을 ||로 표시한다.
+
+const age = prompt("How old are you?")
+
+if(age >= 18 && age <= 21){
+  console.log("you can enter but you should not enter");
+}
+else if (age > 21){
+  console.log("welcome~")
+}
+else{
+  console.log("you can't enter")
 }
 
 
-title.addEventListener("click", handleClick)
 
 
 
 
 
+
+
+
+
+
+
+// function name(parameter1, parameter2, parameter3) {
+//   // code to be executed
+// }
