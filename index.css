@@ -1,20 +1,30 @@
 body {
-  background-color: peru;
+  background-color: #ecf0f1;
 }
 
 h1 {
-  color: white;
+  color: #34495e;
 }
 
-h2 {
+
+.form,
+.greetings {
+  display: none;
+}
+
+.showing {
+  display: block;
+}
+
+/* h2 {
   color: #ecf0f1;
   transition: color .5s ease-in-out;
-}
+} */
 
-.mouseOver {
+/* .mouseOver {
   color: #2980b9
 }
 
 .title_title1 {
   cursor: pointer;
-}
+} */
