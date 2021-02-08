@@ -29,7 +29,22 @@ function askForName() {
 function paintGreeting(text) {
   form.classList.remove(SHOWING_CN);
   greeting.classList.add(SHOWING_CN);
-  greeting.innerText = "Hello " + text;
+  var daytime;
+  const date = new Date();
+  const hours = date.getHours()
+  if(18 < hours <= 24){
+    daytime = "Good Evening"
+  }
+  else if(0 <= hours <= 6) {
+    daytime = "Good Night"
+  }
+  else if(6 < hours <= 12) {
+    daytime = "Good Morning"
+  }
+  else {
+    daytime = "Good Afternoon"
+  }
+  greeting.innerText = daytime + ", " + text + ".";
 }
 
 function loadName(){

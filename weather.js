@@ -12,9 +12,15 @@ function getWeather(lat, log){
     })
     .then(function(json){
       const temperature = Math.round(json.main.temp);
-      const feels_like = Math.round(json.main.feels_like);
       const place = json.name;
-      WEATHER.innerText = `${temperature} @ ${feels_like} @ ${place}`;
+      const span1 = document.createElement("span")
+      const span2 = document.createElement("span")
+      WEATHER.appendChild(span1);
+      span1.innerText = temperature + "°";
+      WEATHER.appendChild(span2);
+      span2.innerText = place;
+      span1.classList.add("weather-span1");
+      span2.classList.add("weather-span2");
     })
   // then을 쓰는 이유는 api로 가져오는 data가 오는걸 기다려야 하기 때문에.
 }
