@@ -32,18 +32,20 @@ function paintGreeting(text) {
   var daytime;
   const date = new Date();
   const hours = date.getHours()
-  if(18 < hours <= 24){
-    daytime = "Good Evening"
-  }
-  else if(0 <= hours <= 6) {
+  if( hours < 6){
     daytime = "Good Night"
   }
-  else if(6 < hours <= 12) {
+  else if( hours <  12) {
     daytime = "Good Morning"
   }
-  else {
+  else if(hours < 18) {
     daytime = "Good Afternoon"
   }
+  else {
+    daytime = "Good Evening"
+  }
+  console.log(hours);
+  console.log(daytime);
   greeting.innerText = daytime + ", " + text + ".";
 }
 
