@@ -130,7 +130,7 @@ console.dir(title_title1);
 
 function handleClick(){
   if(title.style.color == "red"){
-    title.style.color = "white";
+    title.style.color = "black";
     console.log(title.style.color);
   }
   else{
@@ -150,14 +150,14 @@ title.addEventListener("click", handleClick)
 const MOUSEOVER = "mouseOver";
 
 function mouseOver(){
-  title_title1.classList.toggle(MOUSEOVER);
-  // const currentClass = title_title1.className;
-  // if(title_title1.className.indexOf(MOUSEOVER) == -1){
-  //   title_title1.className = title_title1.className + MOUSEOVER;
-  // }
-  // else{
-  //   title_title1.className = title_title1.className.replace(MOUSEOVER, " ");
-  // }
+  // title_title1.classList.toggle(MOUSEOVER);
+  const currentClass = title_title1.className;
+  if(title_title1.className.indexOf(MOUSEOVER) == -1){
+  title_title1.className = title_title1.className + MOUSEOVER;
+  }
+  else{
+    title_title1.className = title_title1.className.replace(MOUSEOVER, " ");
+  }
 }
 
 // if you use 'toggle' you can make code simpler
@@ -165,14 +165,14 @@ function mouseOver(){
 
 
 
-//   const currentColor = title_title1.style.color;
+// const currentColor = title_title1.style.color;
 //   if(currentColor == BASE_COLOR) {
 //     title_title1.style.color = OTHER_COLOR;
 //   }
 //   else {
 //     title_title1.style.color = BASE_COLOR;
 //   }
-// }
+
 
 function init(){
   // title_title1.style.color = BASE_COLOR;

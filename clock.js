@@ -14,7 +14,7 @@ function init(){
   getTime();
   setInterval(getTime, 1000);
 }
-
+// setInterval에서 ( ,tiemout )인데 timeout은 기본값이 miliseconds여서 1000이 1seconds이다. 
 init();
 
 
