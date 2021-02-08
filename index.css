@@ -47,11 +47,16 @@ input {
   font-size: 1.3em;
 }
 
+.js-toDoList li span {
+  border-bottom: rgb(190, 73, 73) groove;
+  padding-bottom: 3px;
+}
+
 button {
   border: none;
   background-color: transparent;
   cursor: pointer;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 .js-weather {
