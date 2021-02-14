@@ -13,7 +13,6 @@ function saveName(text) {
 function handleSubmit(event){
   event.preventDefault();
   const currentValue = input.value;
-  console.log(currentValue);
   paintGreeting(currentValue);
   saveName(currentValue);
 }
@@ -23,6 +22,21 @@ function askForName() {
   form.classList.add(SHOWING_CN)
   form.addEventListener("submit", handleSubmit)
 }
+
+function deleteName() {
+  form.classList.add(SHOWING_CN);
+  greeting.classList.remove(SHOWING_CN);
+  localStorage.removeItem(USER_LS);
+}
+
+function deleteButton() {
+  const delBtn = document.createElement("button");
+  delBtn.innerText = '✔';
+  greeting.appendChild(delBtn);
+  delBtn.classList.add("greeting_btn")
+  delBtn.addEventListener("click", deleteName);
+}
+
 
 
 
@@ -44,9 +58,10 @@ function paintGreeting(text) {
   else {
     daytime = "Good Evening"
   }
-  console.log(hours);
-  console.log(daytime);
   greeting.innerText = daytime + ", " + text + ".";
+
+  deleteButton();
+  
 }
 
 function loadName(){
