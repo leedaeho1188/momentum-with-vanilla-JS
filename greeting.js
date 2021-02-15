@@ -28,18 +28,13 @@ function deleteName() {
   greeting.classList.remove(SHOWING_CN);
   localStorage.removeItem(USER_LS);
 }
-
-function deleteButton() {
+function makeButton() {
   const delBtn = document.createElement("button");
   delBtn.innerText = '✔';
   greeting.appendChild(delBtn);
   delBtn.classList.add("greeting_btn")
   delBtn.addEventListener("click", deleteName);
 }
-
-
-
-
 function paintGreeting(text) {
   form.classList.remove(SHOWING_CN);
   greeting.classList.add(SHOWING_CN);
@@ -59,9 +54,7 @@ function paintGreeting(text) {
     daytime = "Good Evening"
   }
   greeting.innerText = daytime + ", " + text + ".";
-
-  deleteButton();
-  
+  makeButton();
 }
 
 function loadName(){
