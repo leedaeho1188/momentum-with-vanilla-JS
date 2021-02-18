@@ -7,6 +7,7 @@ const TODOS_LS = 'toDos';
 let toDos = [];
 
 
+
 function deleteToDo(event) {
   const btn = event.target;
   const li = btn.parentNode;
@@ -16,6 +17,16 @@ function deleteToDo(event) {
   });
   toDos = cleanToDos;
   saveToDos();
+}
+function showButton() {
+  toDoList.addEventListener("mouseover", mouseOver)
+  toDoList.addEventListener("mouseout", mouseOut)
+}
+function mouseOver() {
+  delBtn.classList.remove("greetings")
+}
+function mouseOut(){
+  delBtn.classList.add("greetings")
 }
 
 
@@ -28,12 +39,17 @@ function saveToDos() {
 
 function paintToDo(text){
   const li = document.createElement("li");
-  const delBtn = document.createElement("button");
   const span = document.createElement("span");
+  const delBtn = document.createElement("button");
   const newId = toDos.length + 1;
   delBtn.innerText = '❌';
   delBtn.addEventListener("click", deleteToDo);
+  delBtn.classList.add("greetings")
   span.innerText = text;
+  let checkBox = document.createElement("input");
+  checkBox.classList.add("checkbox")
+  checkBox.setAttribute("type", "checkbox");
+  li.appendChild(checkBox);
   li.appendChild(span);
   li.appendChild(delBtn);
   li.id = newId;
@@ -44,6 +60,7 @@ function paintToDo(text){
   };
   toDos.push(toDoObj);
   saveToDos();
+  showButton();
 }
 
 
