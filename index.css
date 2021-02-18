@@ -22,33 +22,45 @@ h1 {
 }
 
 .js-clock {
-  font-size: 2em;
+  font-size: 4em;
 }
 
 .js-toDoForm {
 }
 
 input {
+  font-size: 2em;
   background-color: transparent;
   padding: 5px 10px;
   border: 2px solid;
-  color: white;
+  color: #ffffff;
   border-radius: 3px;
 }
 ::placeholder {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
 }
-
+.js-greetings {
+  font-size: 2.5em;
+  margin-top: 20px;
+}
 
 .js-toDoList {
   list-style-type: none;
   padding: 0;
-  font-size: 1.3em;
+  font-size: 2em;
+}
+.js-toDoForm input, .js-form input {
+  border: none;
+  border-bottom: white solid;
+}
+input:focus{
+  outline: none
 }
 
-.js-toDoList li span {
-  border-bottom: rgb(190, 73, 73) groove;
+
+.js-toDoList li {
+  animation: fadeIn 1.5s linear;
   padding-bottom: 3px;
 }
 
@@ -56,7 +68,7 @@ button {
   border: none;
   background-color: transparent;
   cursor: pointer;
-  margin-top: 20px;
+  padding-bottom: 20px;
 }
 
 .js-weather {
@@ -77,14 +89,12 @@ button {
   display: none;
 }
 
+
 .showing {
   display: block;
+  animation: fadeIn 1.5s linear;
 }
 
-h2 {
-  color: #02121a;
-  transition: color .5s ease-in-out;
-}
 
 .mouseOver {
   color: #2980b9
@@ -102,6 +112,14 @@ h2 {
     opacity: 1;
   }
 }
+@keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
 
 .bgImage{
   position: absolute;
@@ -115,6 +133,11 @@ h2 {
 
 .greeting_btn {
   color: rgb(245, 94, 94);
+  font-size: 1em;
+  animation: fadeIn .5s linear;
+}
+.greet {
+  cursor: pointer;
 }
 
 

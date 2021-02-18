@@ -2,6 +2,10 @@ const form = document.querySelector(".js-form");
   input = form.querySelector("input");
   greeting = document.querySelector(".js-greetings");
 
+const greet = document.querySelector(".greet")
+
+const delBtn = document.createElement("button");
+
 const USER_LS = "currentUser";
   SHOWING_CN = "showing";
 
@@ -28,11 +32,23 @@ function deleteName() {
   greeting.classList.remove(SHOWING_CN);
   localStorage.removeItem(USER_LS);
 }
+function showButton() {
+  greet.addEventListener("mouseover", mouseOver)
+  greet.addEventListener("mouseout", mouseOut)
+}
+function mouseOver() {
+  delBtn.classList.remove("greetings")
+}
+function mouseOut(){
+  delBtn.classList.add("greetings")
+}
+
+
 function makeButton() {
-  const delBtn = document.createElement("button");
   delBtn.innerText = '✔';
   greeting.appendChild(delBtn);
   delBtn.classList.add("greeting_btn")
+  delBtn.classList.add("greetings")
   delBtn.addEventListener("click", deleteName);
 }
 function paintGreeting(text) {
@@ -55,6 +71,7 @@ function paintGreeting(text) {
   }
   greeting.innerText = daytime + ", " + text + ".";
   makeButton();
+  showButton();
 }
 
 function loadName(){
