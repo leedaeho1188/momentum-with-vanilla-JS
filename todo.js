@@ -19,12 +19,12 @@ function deleteToDo(event) {
   toDos = cleanToDos;
   saveToDos();
 }
-function showButton() {
+function showButton(){
   toDoList.addEventListener("mouseover", btnOver)
   toDoList.addEventListener("mouseout", btnOut)
 }
-function btnOver() {
-  // delBtnTodo.classList.remove("greeting")
+function btnOver(){
+  // delBtn.classList.remove("greeting")
 }
 function btnOut(){
   // delBtnTodo.classList.add("greeting")
