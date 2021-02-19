@@ -8,6 +8,7 @@ let toDos = [];
 
 
 
+
 function deleteToDo(event) {
   const btn = event.target;
   const li = btn.parentNode;
@@ -19,14 +20,14 @@ function deleteToDo(event) {
   saveToDos();
 }
 function showButton() {
-  toDoList.addEventListener("mouseover", mouseOver)
-  toDoList.addEventListener("mouseout", mouseOut)
+  toDoList.addEventListener("mouseover", btnOver)
+  toDoList.addEventListener("mouseout", btnOut)
 }
-function mouseOver() {
-  delBtn.classList.remove("greetings")
+function btnOver() {
+  // delBtnTodo.classList.remove("greeting")
 }
-function mouseOut(){
-  delBtn.classList.add("greetings")
+function btnOut(){
+  // delBtnTodo.classList.add("greeting")
 }
 
 
@@ -38,13 +39,13 @@ function saveToDos() {
 
 
 function paintToDo(text){
-  const li = document.createElement("li");
   const span = document.createElement("span");
+  const li = document.createElement("li");
   const delBtn = document.createElement("button");
   const newId = toDos.length + 1;
   delBtn.innerText = '❌';
   delBtn.addEventListener("click", deleteToDo);
-  delBtn.classList.add("greetings")
+  delBtn.classList.add("delBtn_todo")
   span.innerText = text;
   let checkBox = document.createElement("input");
   checkBox.classList.add("checkbox")

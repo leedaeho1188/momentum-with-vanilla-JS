@@ -3,8 +3,8 @@ const form = document.querySelector(".js-form");
   greeting = document.querySelector(".js-greetings");
 
 const greet = document.querySelector(".greet")
-
 const delBtn = document.createElement("button");
+
 
 const USER_LS = "currentUser";
   SHOWING_CN = "showing";
