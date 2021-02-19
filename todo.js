@@ -52,6 +52,7 @@ function paintToDo(text){
   let checkBox = document.createElement("input");
   checkBox.classList.add("checkbox")
   checkBox.setAttribute("type", "checkbox");
+  span.classList.add("span_todo")
   li.appendChild(checkBox);
   li.appendChild(span);
   li.appendChild(delBtn);

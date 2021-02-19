@@ -167,4 +167,14 @@ button:focus {
 .checkbox:checked ~ span{
   text-decoration-line: line-through;
 }
+@media only screen and (max-width: 850px) {
+  .js-clock {font-size: 2em}
+  .js-greetings {font-size: 1.2em}
+  input {font-size: 1em}
+  .span_todo {font-size: 20px}
+  .checkbox {padding: 3px; margin-right: 15px}
+  .delBtn_todo {font-size: 10px; margin-left: 10px}
+}
+
+
 
