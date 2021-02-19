@@ -37,7 +37,7 @@ input {
   border-radius: 3px;
 }
 ::placeholder {
-  color: white;
+  color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
 }
 .js-greetings {
@@ -96,7 +96,6 @@ button {
   animation: fadeIn 1.5s linear;
 }
 
-
 .mouseOver {
   color: #2980b9
 }
@@ -142,27 +141,27 @@ button {
 }
 .delBtn_todo {
   margin-left: 20px;
+  font-size: 20px;
+  border: none;
+  color: red;
 }
-.container {
-
+button:focus {
+  outline: none;
 }
 
 .checkbox {
   -webkit-appearance: none;
   border: 1px solid #cacece;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
   padding: 9px;
   border-radius: 3px;
   display: inline-block;
   position: relative;
-  margin-right: 20px;
-  margin-top: 20px;
+  margin-right: 30px;
 
 }
 .checkbox:checked {
   background-color: #e9ecee;
   border: 1px solid #adb8c0;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
   color: #99a1a7;
 }
 .checkbox:checked ~ span{

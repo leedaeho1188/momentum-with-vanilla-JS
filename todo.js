@@ -43,10 +43,12 @@ function paintToDo(text){
   const li = document.createElement("li");
   const delBtn = document.createElement("button");
   const newId = toDos.length + 1;
-  delBtn.innerText = '❌';
+  delBtn.innerText = '✔';
   delBtn.addEventListener("click", deleteToDo);
   delBtn.classList.add("delBtn_todo")
   span.innerText = text;
+  let container = document.createElement("label");
+  container.classList.add("container")
   let checkBox = document.createElement("input");
   checkBox.classList.add("checkbox")
   checkBox.setAttribute("type", "checkbox");
